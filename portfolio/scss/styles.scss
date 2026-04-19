@@ -1,0 +1,286 @@
+$fontEstilo1: "Noto Serif";
+$fontEstilo2: "Roboto";
+
+@mixin link {
+    border: 2px solid transparent;
+    border-radius: 999px;
+}
+
+
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: $fontEstilo2;
+    background-color: rgba(224, 208, 208, 0.8);
+    color: black;
+}
+
+.navbar {
+    background-color: rgba(4, 2, 29, 0.87);
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+
+
+    .nombre {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+
+            &:hover {
+                @include link;
+                color: black;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontEstilo1;
+    justify-content: center;
+    text-align: center;
+
+    #inicio {
+        text-shadow: 0 0 20px black;
+    }
+
+    .heroSection {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .card {
+            @include link;
+            border-color: black;
+            padding: 5px;
+            width: 180px;
+            animation: aparecer 3s;
+            text-shadow: 0 0 20px black;
+
+        }
+
+    }
+
+    a {
+        list-style: none;
+
+    }
+
+    .contacto {
+        font-family: $fontEstilo2;
+        font-size: medium;
+        @include link;
+        transition: transform 0.3s;
+        background-color: black;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            background: rgba(4, 2, 29, 0.87);
+            color: white;
+        }
+
+        &:hover a {
+            color: white;
+        }
+
+    }
+
+}
+
+#sobreMi {
+    margin: 20px auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    width: 70%;
+
+    h4 {
+        text-shadow: 0 0 10px rgb(75, 69, 69);
+
+    }
+
+}
+
+#proyectos {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 0 20px black;
+
+    .proyecto1 {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        box-shadow: 0 0 20px black;
+
+        h4 {
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .durader:hover {
+            box-shadow: 0 0 2px 1px black;
+        }
+    }
+}
+
+#contacto {
+    margin: 30px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fontEstilo2;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 20px black;
+
+
+    form {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        width: fit-content;
+        border: 2px solid transparent;
+        border-radius: 30px;
+        align-items: center;
+        margin: 30px;
+
+        button {
+            margin-top: 80px;
+            font-family: $fontEstilo2;
+            font-size: small;
+            @include link;
+            transition: transform 0.3s;
+            background-color: rgba(177, 167, 167, 0.884);
+
+            &:hover {
+                transform: scale(1.1);
+                background: black;
+                color: white;
+            }
+
+        }
+    }
+}
+
+
+
+footer {
+    background-color: rgba(4, 2, 29, 0.87);
+    margin-top: 30px;
+    border-radius: 2px;
+
+    .datos {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 2px;
+        color: white;
+        font-family: $fontEstilo2;
+
+        & li:hover {
+            color: black;
+        }
+    }
+}
+@media (min-width: 768px) {
+
+    .navbar {
+        .menu {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    main {
+        margin: 40px auto;
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    .heroSection {
+        div {
+            margin: 50px auto;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        button {
+            margin: 50px;
+        }
+
+    }
+
+    .card {
+        flex-direction: row;
+        width: 250px;
+
+    }
+
+    #proyectos {
+        margin: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+}

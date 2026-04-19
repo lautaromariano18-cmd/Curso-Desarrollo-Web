@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mariano Rojas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nombre">
+                <h1>Mariano Rojas</h1>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobreMi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section class="heroSection">
+            <h3 id="inicio">Te ayudo a llevar tus ideas al mundo digital</h3>
+            <div>
+                <article class="card">
+                    <h4>Inicia tu experiencia</h4>
+                </article>
+                <article class="card">
+                    <h4>Accedé a interfaces claras y modernas</h4>
+                </article>
+                <article class="card">
+                    <h4>Soluciones completas</h4>
+                </article>
+
+            </div>
+            <button class="contacto"><a href="#contacto">CONTACTAME</a></button>
+
+        </section>
+
+    </main>
+    <section id="sobreMi">
+        <!-- <h2>Sobre mí</h2> -->
+        <h4>Hola, soy Mariano! </h4>
+        <p> Desarrollador web enfocado en
+            resolucion de problemas y en la creación de
+            experiencias digitales atractivas pensadas para el usuario.
+        </p>
+    </section>
+    <section id="proyectos">
+        <h2>PROYECTOS</h2>
+        <div class="proyecto1">
+            <img src="img/gris.jpeg" style="width: 150px;" class="durader">
+            <h4>Durlock, Pvc, Madera</h4>
+            <p>Construcción en seco..</p>
+            <a href="clase5.html">Ver</a>
+        </div>
+    </section>
+    <section id="contacto">
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" minlength="3" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su telefono" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Escriba su mensaje"></textarea>
+
+            <button type="submit">Consultar</button>
+        </form>
+    </section>
+
+    <footer>
+
+        <ul class="datos">
+            <li><i class="fa-solid fa-phone"></i>CONTÁCTO - 3855365436</li>
+            <li><i class="fa-regular fa-house"></i>DIRECCIÓN - Pje San Cayetano (Sgo del Estero)</li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>
