@@ -1,0 +1,228 @@
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto";
+  background-color: rgba(224, 208, 208, 0.8);
+  color: black;
+}
+
+.navbar {
+  background-color: rgba(4, 2, 29, 0.87);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+}
+.navbar .nombre {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.navbar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+.navbar .menu a {
+  text-decoration: none;
+  color: white;
+}
+.navbar .menu a:hover {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Serif";
+  justify-content: center;
+  text-align: center;
+}
+main #inicio {
+  text-shadow: 0 0 20px black;
+}
+main .heroSection {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .heroSection .card {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  border-color: black;
+  padding: 5px;
+  width: 180px;
+  animation: aparecer 3s;
+  text-shadow: 0 0 20px black;
+}
+main a {
+  list-style: none;
+}
+main .contacto {
+  font-family: "Roboto";
+  font-size: medium;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  transition: transform 0.3s;
+  background-color: black;
+}
+main .contacto a {
+  text-decoration: none;
+  color: white;
+}
+main .contacto:hover {
+  transform: scale(1.1);
+  background: rgba(4, 2, 29, 0.87);
+  color: white;
+}
+main .contacto:hover a {
+  color: white;
+}
+
+#sobreMi {
+  margin: 20px auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+  width: 70%;
+}
+#sobreMi h4 {
+  text-shadow: 0 0 10px rgb(75, 69, 69);
+}
+
+#proyectos {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0 0 20px black;
+}
+#proyectos .proyecto1 {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  box-shadow: 0 0 20px black;
+}
+#proyectos .proyecto1 h4 {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+#proyectos .proyecto1 .durader:hover {
+  box-shadow: 0 0 2px 1px black;
+}
+
+#contacto {
+  margin: 30px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto";
+  text-align: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 0 20px black;
+}
+#contacto form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: fit-content;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  align-items: center;
+  margin: 30px;
+}
+#contacto form button {
+  margin-top: 80px;
+  font-family: "Roboto";
+  font-size: small;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  transition: transform 0.3s;
+  background-color: rgba(177, 167, 167, 0.884);
+}
+#contacto form button:hover {
+  transform: scale(1.1);
+  background: black;
+  color: white;
+}
+
+footer {
+  background-color: rgba(4, 2, 29, 0.87);
+  margin-top: 30px;
+  border-radius: 2px;
+}
+footer .datos {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 2px;
+  color: white;
+  font-family: "Roboto";
+}
+footer .datos li:hover {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .navbar .menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  main {
+    margin: 40px auto;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  .heroSection div {
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .heroSection button {
+    margin: 50px;
+  }
+  .card {
+    flex-direction: row;
+    width: 250px;
+  }
+  #proyectos {
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
